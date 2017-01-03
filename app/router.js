@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('festivals');
+  this.route('artists');
+  this.route('home');
 });
 
 export default Router;

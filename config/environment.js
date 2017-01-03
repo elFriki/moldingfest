@@ -6,11 +6,23 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    moment: {
+			outputFormat: 'LL',
+			allowEmpty: true, // default: false
+      defaultFormat: 'DD.MM.YYYY',
+      includeLocales: true
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       },
+
+      i18n: {
+      defaultLocale: 'es',
+      alowedLocales: ['es','en', 'fr', 'pt']
+      },
+
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
