@@ -6,21 +6,22 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    i18n: {
+      defaultLocale: 'es',
+      alowedLocales: ['es','en', 'fr', 'pt']
+    },
     moment: {
-			outputFormat: 'LL',
-			allowEmpty: true, // default: false
+      outputFormat: 'LL',
+      allowEmpty: true, // default: false
       defaultFormat: 'DD.MM.YYYY',
-      includeLocales: true
+      defaultLocale: 'es',
+      includeLocales: ['es', 'en', 'fr', 'pt'],
+      includeTimezone: 'all'
     },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      },
-
-      i18n: {
-      defaultLocale: 'es',
-      alowedLocales: ['es','en', 'fr', 'pt']
       },
 
       EXTEND_PROTOTYPES: {

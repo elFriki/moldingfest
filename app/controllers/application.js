@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
 	moment: Ember.inject.service(),
 
 	beforeModel() {
-		this.get('moment').changeLocale('es');
+		this.get('moment').setLocale(this.get('locale'));
 	},
 
 	menuLinks: [

@@ -42,7 +42,7 @@ export default Ember.Component.extend({
 
 		changeLocale(param) {
 			this.get('i18n').set('locale', param);
-      this.get('moment').changeLocale(param);
+      this.get('moment').setLocale(param);
       this.toggleProperty('dropdownOpen');
 		},
 
