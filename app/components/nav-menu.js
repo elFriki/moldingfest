@@ -28,12 +28,13 @@ export default Ember.Component.extend({
 			return this.languages.findBy('code', this.get('locale'));
 	}),
 
-
   isMenuOpened: false,
 
 	dropdownOpen: false,
 
 	i18n: Ember.inject.service(),
+
+  moment: Ember.inject.service(),
 
 	locale: Ember.computed.alias('i18n.locale'),
 
@@ -41,7 +42,8 @@ export default Ember.Component.extend({
 
 		changeLocale(param) {
 			this.get('i18n').set('locale', param);
-	        this.toggleProperty('dropdownOpen');
+      this.get('moment').changeLocale(param);
+      this.toggleProperty('dropdownOpen');
 		},
 
 		toggleMenu(){
