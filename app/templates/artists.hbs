@@ -1,4 +1,24 @@
-<h1>Artistas</h1>
+<div class="row-fluid">
+  <div class="panel panel-default">
 
-<h1>{{model.foo}}</h1>
+    <div class="panel-heading">
+      <h3 class="panel-title">{{t 'artists'}}</h3>
+    </div>
+
+    <div class="panel-body">
+
+      {{! LISTA DE FESTIVALES }}
+      {{#each model as |artist|}}
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading">{{artist.name}}</h4>
+            {{artist.country}}
+          </div>
+        </div>
+      {{/each}}
+
+    </div>
+
+  </div>
+</div>
 {{outlet}}

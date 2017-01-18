@@ -1,23 +1,24 @@
-<h1>Festivales </h1>
-
 <div class="row-fluid">
-    <div class="col-md-12">
-        <div class="panel panel-default">
-            <div class="panel-heading"><h3 class="panel-title">Festivales encontrados</h3></div>
-            <div class="panel-body">
+  <div class="panel panel-default">
 
-                {{! LISTA DE RESTAURANTES }}
-                {{#each model as |restaurant|}}
-                    <div class="media">
-                        <div class="media-body">
-                            <h4 class="media-heading">{{restaurant.name}}</h4>
-                            {{restaurant.description}}
-                        </div>
-                    </div>
-                {{/each}}
-
-            </div>
-        </div>
+    <div class="panel-heading">
+      <h3 class="panel-title">{{t 'festivals'}}</h3>
     </div>
+
+    <div class="panel-body">
+
+      {{! LISTA DE FESTIVALES }}
+      {{#each model as |festival|}}
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">{{festival.name}}</h4>
+          {{festival.city}}, {{festival.country}}
+        </div>
+      </div>
+      {{/each}}
+
+    </div>
+
+  </div>
 </div>
 {{outlet}}

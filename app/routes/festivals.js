@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
-const host = 'https://raw.githubusercontent.com/shokmaster/ember-workshops/master/';
-const restaurantsUrl = `${host}resources/restaurants.json`;
+const host = 'https://raw.githubusercontent.com/elFriki/ember-workshops/final/';
+const festivalsUrl = `${host}resources/festivals.json`;
 
 export default Ember.Route.extend({
 
 	model: function() {
-		return Ember.$.getJSON(restaurantsUrl);
+		return Ember.$.getJSON(festivalsUrl);
 	}
 });
