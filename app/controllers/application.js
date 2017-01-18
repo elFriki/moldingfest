@@ -10,15 +10,16 @@ export default Ember.Controller.extend({
 
 	moment: Ember.inject.service(),
 
+  session: Ember.inject.service('session'),
+
 	beforeModel() {
 		this.get('moment').setLocale(this.get('locale'));
 	},
 
-	menuLinks: [
-		{ label: 'festivals', url: 'festivals' },
-    { label: 'artists', url: 'artists' },
-		{ label: 'contact', url: 'contact' }
-	]
-
+	actions: {
+    invalidateSession() {
+      this.get('session').invalidate();
+    }
+  }
 
 });

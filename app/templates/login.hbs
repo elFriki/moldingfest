@@ -1,0 +1,8 @@
+<form {{action 'authenticate' on='submit'}}>
+  {{input id='identification' placeholder='...@...' value=identification}}
+  {{input id='password' placeholder='*****' type='password' value=password}}
+  <button type="submit">Login</button>
+  {{#if errorMessage}}
+    <p>{{errorMessage}}</p>
+  {{/if}}
+</form>

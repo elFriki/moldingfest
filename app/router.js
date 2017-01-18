@@ -7,9 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+  this.route('home');
   this.route('festivals');
   this.route('artists');
-  this.route('home');
+  this.route('admin');
 });
 
 export default Router;
