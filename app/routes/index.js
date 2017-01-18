@@ -7,6 +7,7 @@ export default Ember.Route.extend({
 		this.get('moment').changeLocale('es');
 	},
 */
-  hoy: new Date()
+  hoy: new Date(),
+  antes: "antes"
 
 });
