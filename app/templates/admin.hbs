@@ -1,1 +1,8 @@
+{{#if session.isAuthenticated}}
+  <h4>Ahora estás logado y autorizado.... y lo sabes.</h4>
+{{else}}
+  <h4>Sólo estás logado.... y lo sabes.</h4>
+{{/if}}
+
+
 {{outlet}}

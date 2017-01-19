@@ -1,6 +1,10 @@
 <div class="jumbotron text-center">
 	<h1>{{t 'appName'}}</h1>
 	<h3>{{moment-format hoy}}</h3>
+	{{#if session.isAuthenticated}}
+		<h4>The sound and feeling of the night season</h4>
+	{{/if}}
+
 	{{#if responseMessage}}
 		<div class="alert alert-success" role="alert">{{responseMessage}}</div>
 	{{/if}}
