@@ -1,8 +1,9 @@
 <div class="jumbotron text-center">
 	<h1>{{t 'appName'}}</h1>
 	<h3>{{moment-format hoy}}</h3>
-	{{#if session.isAuthenticated}}
+	{{#if application.session.isAuthenticated}}
 		<h4>The sound and feeling of the night season</h4>
+		<p>Y si estás leyendo esta gilipollez es que estás logado.... Y lo sabes.</p>
 	{{/if}}
 
 	{{#if responseMessage}}

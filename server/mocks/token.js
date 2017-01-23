@@ -7,16 +7,16 @@ module.exports = function(app) {
       if (req.body.username === 'letme' && req.body.password === 'in') {
         res.status(200).send('{ "access_token": "secret token!", "account_id": 1 }');
       } else {
-        res.status(400).send('{ "error": "invalid_grant" }');
+        res.status(400).send('{ "error": "No autorizado" }');
       }
     } else if (req.body.grant_type === 'facebook_auth_code') {
       if (req.body.auth_code) {
         res.status(200).send('{ "access_token": "secret token!", "account_id": 1 }');
       } else {
-        res.status(400).send('{ "error": "invalid_grant" }');
+        res.status(400).send('{ "error": "No autorizado" }');
       }
     } else {
-      res.status(400).send('{ "error": "unsupported_grant_type" }');
+      res.status(400).send('{ "error": "Tipo de autorización no soportado" }');
     }
   });
 
@@ -24,7 +24,7 @@ module.exports = function(app) {
     if (req.body.token_type_hint === 'access_token' || req.body.token_type_hint === 'refresh_token') {
       res.status(200).end();
     } else {
-      res.status(400).send('{ "error": "unsupported_token_type" }');
+      res.status(400).send('{ "error": "Sesión expirada" }');
     }
   });
 

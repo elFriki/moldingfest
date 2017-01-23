@@ -1,4 +1,13 @@
 <div class="container-fluid">
+  <nav>
+
+  {{#if session.isAuthenticated}}
+    {{#link-to 'admin'}}<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>{{/link-to}}
+    <a {{action 'invalidateSession'}}><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a>
+  {{else}}
+    {{#link-to 'login'}}<span class="glyphicon glyphicon-off" aria-hidden="true"></span>{{/link-to}}
+  {{/if}}
+</nav>
 {{nav-menu}}
 {{outlet}}
 {{yield}}

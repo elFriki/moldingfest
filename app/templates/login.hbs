@@ -1,4 +1,7 @@
 <div class="well text-center">
+  {{#if session.isAuthenticated}}
+  <h4>Ahora estás logado... y lo sabes</h4>
+  {{else}}
   <form {{action 'authenticate' on='submit'}}>
     {{input id='identification' placeholder='...@...' value=identification}}
     {{input id='password' placeholder='*****' type='password' value=password}}
@@ -7,4 +10,5 @@
       <p>{{errorMessage}}</p>
     {{/if}}
   </form>
+  {{/if}}
 </div>

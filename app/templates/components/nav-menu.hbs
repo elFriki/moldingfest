@@ -45,12 +45,6 @@
 					<li>{{#link-to 'admin'}}<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>{{/link-to}}</li>
 				{{/if}}
 
-				{{#if session.isAuthenticated}}
-				  <li><a {{action 'invalidateSession'}}><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
-				{{else}}
-				  <li>{{#link-to 'login'}}<span class="glyphicon glyphicon-off" aria-hidden="true"></span>{{/link-to}}</li>
-				{{/if}}
-
 				<li class="dropdown {{if dropdownOpen 'open'}}">
 					<a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" {{action 'toggleDropdown'}}><img src="{{t 'localeFlag'}}" class="icon-flag carret"></a>
 					<ul class="dropdown-menu">
